@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     
     
     override func viewWillAppear(_ animated: Bool) {
-        scrollView.contentSize.height = 4500 // Arbitrary height of scrollable area
+        scrollView.contentSize.height = 2000 // Arbitrary height of scrollable area
     }
     
 }
