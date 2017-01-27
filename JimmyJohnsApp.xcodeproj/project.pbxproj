@@ -516,6 +516,7 @@
 				BF0FD3001E3951A800D8B9D6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BF0FD3011E3951A800D8B9D6 /* Build configuration list for PBXNativeTarget "JimmyJohnsAppTests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +525,7 @@
 				BF0FD3031E3951A800D8B9D6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BF0FD3041E3951A800D8B9D6 /* Build configuration list for PBXNativeTarget "JimmyJohnsAppUITests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +534,7 @@
 				BF0FD3061E3951A800D8B9D6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
