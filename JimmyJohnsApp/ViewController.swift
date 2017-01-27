@@ -10,16 +10,11 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    @IBOutlet weak var scrollView: UIScrollView!
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        scrollView.contentSize.height = 4500 // Arbitrary height of scrollable area
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
+    
 }
-
