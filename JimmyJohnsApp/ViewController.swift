@@ -8,13 +8,23 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class MainVC: UIViewController {
     
     // Variables
     var lettuceCount: Double = 0.0
     var tomsCount: Double = 0.0
     var onionsCount: Double = 0.0
     var cucsCount: Double = 0.0
+    var allDaysArray: [UITextField?] = []
+    
+    var amDouble1 = 0.0
+    var amDouble2 = 0.0
+    var amDouble3 = 0.0
+    var amDouble4 = 0.0
+    var pmDouble1 = 0.0
+    var pmDouble2 = 0.0
+    var pmDouble3 = 0.0
+    var pmDouble4 = 0.0
 
     // Outlets
     @IBOutlet weak var scrollView: UIScrollView!
@@ -103,17 +113,98 @@ class ViewController: UIViewController {
     @IBOutlet weak var elevenPMday4: UITextField!
     
     override func viewDidAppear(_ animated: Bool) {
-        scrollView.contentSize.height = 2010 // Arbitrary height of scrollable area
+        scrollView.contentSize.height = 2050 // Arbitrary height of scrollable area
         
-        let dayOneArray = [sixAMday1, sevenAMday1, eightAMday1, nineAMday1, tenAMday1, elevenAMday1, twelvePMday1, onePMday1, twoPMday1, threePMday1, fourPMday1, fivePMday1, sixPMday1, sevenPMday1, eightPMday1, ninePMday1, tenPMday1, elevenPMday1]
+        var dayOneArray: [UITextField?] = [sixAMday1, sevenAMday1, eightAMday1, nineAMday1, tenAMday1]
+            dayOneArray += [elevenAMday1, twelvePMday1, onePMday1, twoPMday1, threePMday1]
+            dayOneArray += [fourPMday1, fivePMday1, sixPMday1, sevenPMday1, eightPMday1]
+            dayOneArray += [ninePMday1, tenPMday1, elevenPMday1]
+        var dayTwoArray: [UITextField?] = [sixAMday2, sevenAMday2, eightAMday2, nineAMday2, tenAMday2]
+            dayTwoArray += [elevenAMday2, twelvePMday2, onePMday2, twoPMday2, threePMday2]
+            dayTwoArray += [fourPMday2, fivePMday2, sixPMday2, sevenPMday2, eightPMday2]
+            dayTwoArray += [ninePMday2, tenPMday2, elevenPMday2]
+        var dayThreeArray: [UITextField?] = [sixAMday3, sevenAMday3, eightAMday3, nineAMday3, tenAMday3]
+            dayThreeArray += [elevenAMday3, twelvePMday3, onePMday3, twoPMday3, threePMday3]
+            dayThreeArray += [fourPMday3, fivePMday3, sixPMday3, sevenPMday3, eightPMday3]
+            dayThreeArray += [ninePMday3, tenPMday3, elevenPMday3]
+        var dayFourArray: [UITextField?] = [sixAMday4, sevenAMday4, eightAMday4, nineAMday4, tenAMday4]
+            dayFourArray += [elevenAMday4, twelvePMday4, onePMday4, twoPMday4, threePMday4]
+            dayFourArray += [fourPMday4, fivePMday4, sixPMday4, sevenPMday4, eightPMday4]
+            dayFourArray += [ninePMday4, tenPMday4, elevenPMday4]
         
-        for num in dayOneArray {
-            print(num?.text)
+        allDaysArray = dayOneArray + dayTwoArray + dayThreeArray + dayFourArray
+        
+        for field in allDaysArray {
+            field?.text = ""
+            field?.placeholder = "0"
         }
+//
+//        // Total for AM each day
+//        for (index, field) in dayOneArray {
+//            if index <= 5 {
+//                amDouble1 += Double((field?.text)!)!
+//            } else {
+//                pmDouble1 += Double((field?.text)!)!
+//            }
+//        }
+//        for (index, field) in dayTwoArray {
+//            if index <= 5 {
+//                amDouble2 += Double((field?.text)!)!
+//            } else {
+//                pmDouble2 += Double((field?.text)!)!
+//            }
+//        }
+//        for (index, field) in dayThreeArray {
+//            if index <= 5 {
+//                amDouble3 += Double((field?.text)!)!
+//            } else {
+//                pmDouble3 += Double((field?.text)!)!
+//            }
+//        }
+//        for (index, field) in dayFourArray {
+//            if index <= 5 {
+//                amDouble4 += Double((field?.text)!)!
+//            } else {
+//                pmDouble4 += Double((field?.text)!)!
+//            }
+//        }
+        
+//        let am: Double = amDouble1 + amDouble2 + amDouble3 + amDouble4
+//        let pm: Double = pmDouble1 + pmDouble2 + pmDouble3 + pmDouble4
+//        
+//        let amInt: Int = 0
+//        let pmInt: Int = 0
+        
+//        amInt = Int((am/4)+49)/50*50
+//        pmInt = Int((pm/4)+49)/50*50
+//        let total = (amInt + pmInt + 49)/50*50
+//        
+//        lettuceCount = 0.0  // = Math.ceil(double(total)/500)
+//        tomsCount = 0.0     // = Math.ceil(double(total)/1200)
+//        onionsCount = 0.0   // = Math.ceil(double(total)/1800)
+//        cucsCount = 0.0     // = Math.ceil(double(total)/1800)
+//        
+//        totalEarningsLabel.text = "$\(total)"
+//        amEarningsLabel.text = "AM EARNINGS: $\(amInt)"
+//        pmEarningsLabel.text = "PM EARNINGS: $\(pmInt)"
+//        lettuceLabel.text = "\(lettuceCount) bins of lettuce"
+//        tomsLabel.text = "\(tomsCount) bins of toms"
+//        onionsLabel = "\(onionsCount) bins of onions"
+//        cucsLabel = "\(cucsCount) bins of cucs"
     }
+    
+//    func hideAllTextFields() {
+//        for field in allDaysArray {
+//            field?.resignFirstResponder()
+//        }
+//    }
     
     // Actions
     @IBAction func calculateButtonPressed(_ sender: Any) {
-        
+//        hideAllTextFields()
+    }
+    
+    @IBAction func tappedBackground(_ sender: Any) {
+//        hideAllTextFields()
     }
 }

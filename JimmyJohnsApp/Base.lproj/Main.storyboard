@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--MainVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="JimmyJohnsApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainVC" customModule="JimmyJohnsApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -25,7 +25,7 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lon-BD-thk">
                                 <rect key="frame" x="16" y="20" width="343" height="2010"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XnH-qe-8Yc" userLabel="ContentView">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XnH-qe-8Yc" userLabel="ContentView" customClass="UIControl">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="2010"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xfE-D6-Zhi">
@@ -426,12 +426,11 @@ If no revenue occured, put 0.</string>
                                                     </stackView>
                                                 </subviews>
                                                 <constraints>
-                                                    <constraint firstItem="5lT-d9-5Nl" firstAttribute="leading" secondItem="02W-4P-ge9" secondAttribute="leading" id="Can-Dn-n81"/>
-                                                    <constraint firstAttribute="trailing" secondItem="5lT-d9-5Nl" secondAttribute="trailing" id="KXw-iv-jil"/>
                                                     <constraint firstAttribute="trailing" secondItem="BGY-nK-jod" secondAttribute="trailing" id="Uud-hp-HTj"/>
                                                     <constraint firstItem="BGY-nK-jod" firstAttribute="leading" secondItem="02W-4P-ge9" secondAttribute="leading" id="XPv-zh-sgL"/>
                                                     <constraint firstItem="5lT-d9-5Nl" firstAttribute="top" secondItem="02W-4P-ge9" secondAttribute="top" id="f5h-xa-cN7"/>
                                                     <constraint firstItem="cRX-pS-Ac9" firstAttribute="centerX" secondItem="02W-4P-ge9" secondAttribute="centerX" id="jfo-eZ-OxH"/>
+                                                    <constraint firstItem="5lT-d9-5Nl" firstAttribute="centerX" secondItem="02W-4P-ge9" secondAttribute="centerX" id="lNC-PW-ddc"/>
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="ser-iE-GNK" userLabel="Day 2">
@@ -1755,6 +1754,9 @@ If no revenue occured, put 0.</string>
                                             <constraint firstItem="02W-4P-ge9" firstAttribute="leading" secondItem="XnH-qe-8Yc" secondAttribute="leading" constant="12" id="xyv-vL-NxT"/>
                                             <constraint firstItem="02W-4P-ge9" firstAttribute="top" secondItem="xfE-D6-Zhi" secondAttribute="bottom" constant="20" id="y1f-z4-P1E"/>
                                         </constraints>
+                                        <connections>
+                                            <action selector="tappedBackground:" destination="BYZ-38-t0r" eventType="touchDown" id="Z74-7Y-B8E"/>
+                                        </connections>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
